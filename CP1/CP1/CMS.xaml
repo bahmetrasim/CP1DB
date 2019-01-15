@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CP1.CMS">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="controlGrid" Padding="10,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--1.Parametre-->
+                <Label Text="LabelParam1"
+                       x:Name="LabelParam1"
+                Grid.Row="0" Grid.Column="0" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+                <Entry x:Name="Entryparam1"
+                       ClassId="Entryparam1"
+                       Text=""
+                       TextChanged="startentry"
+                       Grid.Row="0" Grid.Column="1"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label Text="UnitParam1"
+                       x:Name="UnitParam1"
+                Grid.Row="0" Grid.Column="2" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+
+                <!--2.Parametre-->
+                <Label Text="LabelParam2"
+                       x:Name="LabelParam2"
+                Grid.Row="1" Grid.Column="0" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+                <Entry x:Name="Entryparam2"
+                       ClassId="Entryparam2"
+                       Text=""
+                       TextChanged="startentry"
+                       Grid.Row="1" Grid.Column="1"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label Text="UnitParam2"
+                       x:Name="UnitParam2"
+                Grid.Row="1" Grid.Column="2" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+
+                <!--3.Parametre-->
+                <Label Text="LabelParam3"
+                       x:Name="LabelParam3"
+                Grid.Row="2" Grid.Column="0" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+                <Entry x:Name="Entryparam3"
+                       ClassId="Entryparam3"
+                       Text=""
+                       TextChanged="startentry"
+                       Grid.Row="2" Grid.Column="1"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label Text="UnitParam3"
+                       x:Name="UnitParam3"
+                Grid.Row="2" Grid.Column="2" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+
+                <!--4.Parametre Boya-1 İçin-->
+                <Label Text="LabelParam4"
+                       x:Name="LabelParam4"
+                Grid.Row="3" Grid.Column="0" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+                <Entry x:Name="Entryparam4"
+                       ClassId="Entryparam4"
+                       Text=""
+                       TextChanged="startentry"
+                       Grid.Row="3" Grid.Column="1"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label Text="UnitParam4"
+                       x:Name="UnitParam4"
+                Grid.Row="3" Grid.Column="2" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+
+                <!--4.Parametre Boya-2 İçin-->
+                <Label Text="LabelParam5"
+                       x:Name="LabelParam5"
+                Grid.Row="3" Grid.Column="0" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+                <Picker x:Name="Rezine"
+                       Title="Boya Türünü Seçiniz"
+                       SelectedIndexChanged="ResinSelected"
+                       Grid.Row="3" Grid.Column="1"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label Text="UnitParam5"
+                       x:Name="UnitParam5"
+                Grid.Row="3" Grid.Column="2" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+
+                    <!--Calculate Button-->
+                    <Button x:Name="Calculate"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Text="CALCULATE"
+                        BorderWidth="20"
+                        FontSize="20"
+                        Grid.Row="4" Grid.Column="1"
+                        Clicked="Calculate_Clicked"/>
+
+                    <!--RESULT-->
+                    <Label Text="Labelresult"
+                       x:Name="Labelresult"
+                Grid.Row="5" Grid.Column="0" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+                    <Frame OutlineColor="Black"
+                       Grid.Row="5" Grid.Column="1">
+                        <Label
+                    x:Name="RESULT"
+                        Text="GET RESULT"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        FontSize="20"
+                    Grid.Row="5" Grid.Column="1"
+                    />
+                    </Frame>
+                    <Label Text="Unitresult"
+                       x:Name="Unitresult"
+                Grid.Row="5" Grid.Column="2" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       Font="16"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

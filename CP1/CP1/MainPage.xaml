@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CP1"
+             x:Class="CP1.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <StackLayout>
+            <Picker x:Name="picker" 
+                    Title="Malzemeyi Seçiniz" 
+                    SelectedIndexChanged="OnPickerSelectedIndexChanged">
+
+                <!--<Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Aluminium</x:String>
+                        <x:String>Steel</x:String>
+                        <x:String>Stainless Steel</x:String>
+                        <x:String>Copper</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>-->
+
+            </Picker>
+            <Label x:Name="Mat" 
+            Text="{Binding Source={x:Reference picker}, Path=SelectedItem}"/>
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <Button Text="Click to Calculate"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Accent"
+                TextColor="Black"
+                Clicked="OnButtonClicked" />
+
+        </StackLayout>
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+
+    </StackLayout>
+
+</ContentPage>
