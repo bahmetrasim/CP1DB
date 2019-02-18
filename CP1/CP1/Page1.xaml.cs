@@ -14,7 +14,6 @@ namespace CP1
 	{
         Dictionary<string, Tuple<List<string>, Func<double, double, double, double, double, double>, double>> calculators = new Dictionary<string, Tuple<List<string>, Func<double, double, double, double, double, double>, double>>();
         double den;
-
         public Page1 ()
         {
         
@@ -34,7 +33,7 @@ namespace CP1
             List<string> MI1 = new List<string>() { "Metraj", "En", "Kalınlık", "Miktar", "m", "mm", "mm", "kg" };
             List<string> MI2 = new List<string>() { "İç Çap", "Dış Çap", "En", "Miktar", "mm", "mm", "mm", "kg" };
             List<string> BO1 = new List<string>() { "Miktar", "Kalınlık", "B.Kalınlık", "Kaplama", "Boya Miktarı", "Kg", "mm", "μm", "m2/1kg1μm", "Kg" };
-            List<string> BO2 = new List<string>() { "Miktar", "Kalınlık", "B.Kalınlık", "Kaplama", "Boya Miktarı", "Kg", "mm", "μm", "Reçine", "Kg"};
+            List<string> BO2 = new List<string>() { "Miktar", "Kalınlık", "B.Kalınlık", "Boya Cinsi", "Boya Miktarı", "Kg", "mm", "μm", "Reçine", "Kg"};
             List<string> FA1 = new List<string>() { "F.İç Çap", "F.Dış Çap", "F.Kalınlık", "Miktar", "mm", "mm", "μm", "kg" };
             List<string> FA2 = new List<string>() { "F.Metraj", "F.Kalınlık", "F.En", "Miktar", "mm", "μm", "mm", "kg" };
             List<string> FM1 = new List<string>() { "F.İç Çap", "F.Dış Çap", "F.Kalınlık", "Metraj", "mm", "mm", "mm", "m" };
@@ -71,6 +70,9 @@ namespace CP1
             await Navigation.PushAsync(new CMS(den,selected,name));
         }
 
-
+        private async void MP_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MecProp());
+        }
     }
 }

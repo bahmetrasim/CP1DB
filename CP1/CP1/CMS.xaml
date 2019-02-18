@@ -30,7 +30,7 @@
                 <Entry x:Name="Entryparam1"
                        ClassId="Entryparam1"
                        Text=""
-                       TextChanged="startentry"
+                       TextChanged="Startentry"
                        Grid.Row="0" Grid.Column="1"
                        VerticalOptions="CenterAndExpand"/>
                 <Label Text="UnitParam1"
@@ -50,7 +50,7 @@
                 <Entry x:Name="Entryparam2"
                        ClassId="Entryparam2"
                        Text=""
-                       TextChanged="startentry"
+                       TextChanged="Startentry"
                        Grid.Row="1" Grid.Column="1"
                        VerticalOptions="CenterAndExpand"/>
                 <Label Text="UnitParam2"
@@ -70,7 +70,7 @@
                 <Entry x:Name="Entryparam3"
                        ClassId="Entryparam3"
                        Text=""
-                       TextChanged="startentry"
+                       TextChanged="Startentry"
                        Grid.Row="2" Grid.Column="1"
                        VerticalOptions="CenterAndExpand"/>
                 <Label Text="UnitParam3"
@@ -90,7 +90,7 @@
                 <Entry x:Name="Entryparam4"
                        ClassId="Entryparam4"
                        Text=""
-                       TextChanged="startentry"
+                       TextChanged="Startentry"
                        Grid.Row="3" Grid.Column="1"
                        VerticalOptions="CenterAndExpand"/>
                 <Label Text="UnitParam4"
@@ -123,7 +123,7 @@
                     <Button x:Name="Calculate"
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand"
-                        Text="CALCULATE"
+                        Text="HESAPLA"
                         BorderWidth="20"
                         FontSize="20"
                         Grid.Row="4" Grid.Column="1"
@@ -140,7 +140,7 @@
                        Grid.Row="5" Grid.Column="1">
                         <Label
                     x:Name="RESULT"
-                        Text="GET RESULT"
+                        Text="SONUÇ"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
                         FontSize="20"

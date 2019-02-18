@@ -229,7 +229,7 @@ namespace CP1
         }
 
 
-        private async void startentry(object sender, TextChangedEventArgs e)
+        private async void Startentry(object sender, TextChangedEventArgs e)
         {
             var value = (sender as Entry).Text;
             var ıd = (sender as Entry).ClassId;

@@ -47,13 +47,13 @@ namespace CP1
             return (((Math.PI * (OD * OD - ID * ID)) / (4 * L)) / 1000);
         }
         //Film Eklemesi
-        public static double FA1(double Den, double ID, double OD, double L, double cons)
+        public static double FA1(double Den, double FID, double FOD, double Ft, double cons)
         {
-            return (((Math.PI * (OD * OD - ID * ID)) / (4 * L)) / 1000);
+            return (((Math.PI * (FOD * FOD - FID * FID)) / (4 * Ft)) / 1000);
         }
-        public static double FA2(double Den, double ID, double OD, double L, double cons)
+        public static double FA2(double Den, double FL, double Ft, double FWi, double cons)
         {
-            return (((Math.PI * (OD * OD - ID * ID)) / (4 * L)) / 1000);
+            return ((Ft/1000000)*(FWi/1000)*FL*920);
         }
         public static double FM1(double Den, double ID, double OD, double L, double cons)
         {
@@ -77,7 +77,7 @@ namespace CP1
 
         public static double IU(double Den, double H, double L, double cons, double cons2)
         {
-            return (Math.Pow((Math.PI * H / (2*L)), 2)) * Math.Pow(10,5);
+            return (Math.Pow((H / L), 2) * Math.Pow((Math.PI) / 2, 2) * Math.Pow(10, 5));
         }
     }
 }

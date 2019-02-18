@@ -92,7 +92,7 @@
                 Grid.Row="1" Grid.Column="0" 
                 VerticalOptions="StartAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-                <Button Text="-İç Çap&#x0a;-Miktar&#x0a;-En"
+                <Button Text="-İç Çap&#x0a;-En&#x0a;-Miktar"
                         x:Name="DI1"
                         ClassId="DI1"
                         Clicked="CMS_Clicked"
@@ -109,7 +109,7 @@
                 Grid.Row="1" Grid.Column="1" 
                 VerticalOptions="StartAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-                <Button Text="-İç Çap&#x0a;-Miktar&#x0a;-En"
+                <Button Text="-İç Çap&#x0a;-Metraj&#x0a;-Kalınlık"
                         x:Name="DI2"
                         ClassId="DI2"
                         Clicked="CMS_Clicked"
@@ -160,7 +160,7 @@
                 VerticalOptions="StartAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 <Button
-                    Text="-Dış Çap&#x0a;-En Çap&#x0a;-Miktar"
+                    Text="-Miktar&#x0a;-Dış Çap&#x0a;-En"
                     x:Name="IC1"
                     ClassId="IC1"
                     Clicked="CMS_Clicked"
@@ -177,7 +177,7 @@
                 VerticalOptions="StartAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 <Button
-                    Text="-Dış Çap&#x0a;-En Çap&#x0a;-Miktar"
+                    Text="-Metraj&#x0a;-Dış Çap&#x0a;-Kalınlık"
                     x:Name="IC2"
                     ClassId="IC2"
                     Clicked="CMS_Clicked"
@@ -194,7 +194,7 @@
                 VerticalOptions="StartAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 <Button
-                    Text="-Miktar&#x0a;-Kaplama&#x0a;-Kalınlık&#x0a;-Boya Kal"
+                    Text="-Miktar&#x0a;-Kalınlık&#x0a;-Boya Kal&#x0a;-Kaplama"
                     x:Name="BO1"
                     ClassId="BO1"
                     Clicked="CMS_Clicked"
@@ -312,7 +312,25 @@
                     WidthRequest="100"
                     FontSize="9"
                     Grid.Row="4" Grid.Column="0"/>
-               
+
+                <!--Mechanical Properties-->
+                <Label Text="Mekanik Özellikler" 
+                Grid.Row="4" Grid.Column="1" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                <Button 
+                    Text="-Alaşım&#x0a;-Kondüsyon"
+                    x:Name="MP"
+                    ClassId="MP"
+                    Clicked="MP_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    FontSize="9"
+                    Grid.Row="4" Grid.Column="1"/>
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>
