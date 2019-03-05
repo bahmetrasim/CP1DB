@@ -14,7 +14,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                
+
                 <!--Çoklu Seçim İçin-->
                 <Grid
                 x:Name="show" Padding="5,10,10,10"
@@ -57,7 +57,7 @@
                             VerticalOptions="CenterAndExpand"
                             HorizontalOptions="CenterAndExpand">
                             <Picker.ItemDisplayBinding>
-                            <Binding Path="AlloyName" />
+                                <Binding Path="AlloyName" />
                             </Picker.ItemDisplayBinding>
                         </Picker>
                         <!--Kondüsyon-->
@@ -113,7 +113,7 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        
+
                         <!--Tanımlar-->
                         <Label
                             VerticalOptions="CenterAndExpand"
@@ -135,6 +135,7 @@
                             Text = "Çekme&#x0a;(MPa)"
                             Grid.Row="1" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="1" Grid.Column="1">
                             <Label
                                     x:Name="TMin"
@@ -144,6 +145,7 @@
                                     Grid.Row="1" Grid.Column="1"/>
                         </Frame>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="1" Grid.Column="2">
                             <Label
                                     x:Name="TMax"
@@ -159,6 +161,7 @@
                             Text = "Akma&#x0a;(MPa)"
                             Grid.Row="2" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="2" Grid.Column="1">
                             <Label
                                     x:Name="YMin"
@@ -168,6 +171,7 @@
                                     Grid.Row="2" Grid.Column="1"/>
                         </Frame>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="2" Grid.Column="2">
                             <Label
                                     x:Name="YMax"
@@ -183,6 +187,7 @@
                             Text = "Uzama&#x0a;(%)"
                             Grid.Row="3" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="3" Grid.Column="1">
                             <Label
                                     x:Name="EMin"
@@ -192,6 +197,7 @@
                                     Grid.Row="1" Grid.Column="1"/>
                         </Frame>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="3" Grid.Column="2">
                             <Label
                                     x:Name="EMax"
@@ -207,6 +213,7 @@
                             Text = "Bükme&#x0a;(t)"
                             Grid.Row="4" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="4" Grid.Column="1">
                             <Label
                                     x:Name="B90"
@@ -216,6 +223,7 @@
                                     Grid.Row="4" Grid.Column="1"/>
                         </Frame>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="4" Grid.Column="2">
                             <Label
                                     x:Name="B180"
@@ -244,11 +252,13 @@
                             Text = "Sertlik&#x0a;HBW"
                             Grid.Row="0" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="0" Grid.Column="1">
                             <Label
                                     x:Name="Hard"
                                     Text="Sert"
                                     FontSize="Medium"
+                                    TextColor="Black"
                                     VerticalOptions="CenterAndExpand"
                                     HorizontalOptions="CenterAndExpand"
                                     Grid.Row="0" Grid.Column="1"/>
@@ -376,6 +386,7 @@
                             Text = "Çekme&#x0a;(MPa)"
                             Grid.Row="1" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="1" Grid.Column="1">
                             <Label
                                     x:Name="TMinC"
@@ -385,6 +396,7 @@
                                     Grid.Row="1" Grid.Column="1"/>
                         </Frame>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="1" Grid.Column="2">
                             <Label
                                     x:Name="TMaxC"
@@ -400,6 +412,7 @@
                             Text = "Akma&#x0a;(MPa)"
                             Grid.Row="2" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="2" Grid.Column="1">
                             <Label
                                     x:Name="YMinC"
@@ -409,6 +422,7 @@
                                     Grid.Row="2" Grid.Column="1"/>
                         </Frame>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="2" Grid.Column="2">
                             <Label
                                     x:Name="YMaxC"
@@ -424,6 +438,7 @@
                             Text = "Uzama&#x0a;(%)"
                             Grid.Row="3" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="3" Grid.Column="1">
                             <Label
                                     x:Name="EMinC"
@@ -433,6 +448,7 @@
                                     Grid.Row="1" Grid.Column="1"/>
                         </Frame>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="3" Grid.Column="2">
                             <Label
                                     x:Name="EMaxC"
@@ -448,6 +464,7 @@
                             Text = "Bükme&#x0a;(t)"
                             Grid.Row="4" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="4" Grid.Column="1">
                             <Label
                                     x:Name="B90C"
@@ -457,6 +474,7 @@
                                     Grid.Row="4" Grid.Column="1"/>
                         </Frame>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="4" Grid.Column="2">
                             <Label
                                     x:Name="B180C"
@@ -485,6 +503,7 @@
                             Text = "Sertlik&#x0a;HBW"
                             Grid.Row="0" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                Padding="0"
                                 Grid.Row="0" Grid.Column="1">
                             <Label
                                     x:Name="HardC"
@@ -535,7 +554,7 @@
                     x:Name="Row2"
                     ClassId="Row2cs"
                     IsVisible="False"/>
-                
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>
