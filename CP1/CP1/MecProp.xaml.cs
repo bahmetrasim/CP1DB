@@ -27,13 +27,13 @@ namespace CP1
         Dictionary<string, string> allproperties2 = new Dictionary<string, string>();
         //ObservableCollection<Alloy> alloycollection;
         List<Alloy> alloys = new List<Alloy>();
-        public  MecProp()
+        public MecProp()
         {
             InitializeComponent();
             show2.IsVisible = false;
             GetAlloyList();
-            
-            
+
+
         }
 
         private void MPS_Clicked(object sender, EventArgs e)
@@ -56,20 +56,33 @@ namespace CP1
             }
             else
             {
-                TMaxC.Text = allproperties1["TensileMax2"];
-                TMinC.Text = allproperties1["TensileMin2"];
-                YMaxC.Text = allproperties1["YieldMax2"];
-                YMinC.Text = allproperties1["YieldMin2"];
-                B180C.Text = allproperties1["Bend1802"];
-                B90C.Text = allproperties1["Bend902"];
+                TMaxC.Text = allproperties2["TensileMax"];
+                TMinC.Text = allproperties2["TensileMin"];
+                YMaxC.Text = allproperties2["YieldMax"];
+                YMinC.Text = allproperties2["YieldMin"];
+                B180C.Text = allproperties2["Bend180"];
+                B90C.Text = allproperties2["Bend90"];
                 EMaxC.Text = "";
-                EMinC.Text = allproperties1["ElogMin2"];
-                HardC.Text = allproperties1["Hardness2"];
+                EMinC.Text = allproperties2["ElogMin"];
+                HardC.Text = allproperties2["Hardness"];
 
             }
         }
         private void Alloychanged(object sender, EventArgs e)
         {
+            if (kond.Items.Count > 0)
+            {
+                kond.ItemsSource.Clear();
+                kond.SelectedIndex = -1;
+
+
+            }
+            if (kalınlık.Items.Count > 0)
+            {
+                kalınlık.ItemsSource.Clear();
+                kalınlık.SelectedIndex = -1;
+
+            }
             var picker = (Picker)sender;
             var alloyname = (Alloy)picker.SelectedItem;
             alloy1 = alloyname.AlloyName.ToString();
@@ -78,27 +91,35 @@ namespace CP1
         }
         private void Temperchanged(object sender, EventArgs e)
         {
-            var picker = (Picker)sender;
-            var tempername = (Alloy)picker.SelectedItem;
-            temper1 = tempername.Temper.ToString();
-            GetThickList(alloy1, temper1);
+            if (kond.SelectedIndex != -1)
+            {
+                var picker = (Picker)sender;
+                var tempername = (Alloy)picker.SelectedItem;
+                temper1 = tempername.Temper.ToString();
+                GetThickList(alloy1, temper1);
+            }
+
         }
         private void Thicknesschanged(object sender, EventArgs e)
         {
-            var picker = (Picker)sender;
-            var thick = (Alloy)picker.SelectedItem;
-            thick1 = thick.Thickness.ToString();
-            GetSelectedRow(alloy1, temper1, thick1);
-            var alllist = (Alloy)Row1.ItemsSource[0];
+            if (kalınlık.SelectedIndex != -1)
+            {
 
-            allproperties1.Add("TensileMax", alllist.Tensile_Max.ToString());
-            allproperties1.Add("TensileMin", alllist.Tensile_Min.ToString());
-            allproperties1.Add("YieldMax", alllist.Yield_Max.ToString());
-            allproperties1.Add("YieldMin", alllist.Yield_Min.ToString());
-            allproperties1.Add("ElogMin", alllist.Elongation_Min.ToString());
-            allproperties1.Add("Bend180", alllist.Bend_180.ToString());
-            allproperties1.Add("Bend90", alllist.Bend_90.ToString());
-            allproperties1.Add("Hardness", alllist.Hardness.ToString());
+                var picker = (Picker)sender;
+                var thick = (Alloy)picker.SelectedItem;
+                thick1 = thick.Thickness.ToString();
+                GetSelectedRow(alloy1, temper1, thick1);
+                var alllist = (Alloy)Row1.ItemsSource[0];
+                allproperties1.Clear();
+                allproperties1.Add("TensileMax", alllist.Tensile_Max.ToString());
+                allproperties1.Add("TensileMin", alllist.Tensile_Min.ToString());
+                allproperties1.Add("YieldMax", alllist.Yield_Max.ToString());
+                allproperties1.Add("YieldMin", alllist.Yield_Min.ToString());
+                allproperties1.Add("ElogMin", alllist.Elongation_Min.ToString());
+                allproperties1.Add("Bend180", alllist.Bend_180.ToString());
+                allproperties1.Add("Bend90", alllist.Bend_90.ToString());
+                allproperties1.Add("Hardness", alllist.Hardness.ToString());
+            }
 
             //GetTensileMax(alloy1, temper1, thick1);
             //GetTensileMin(alloy1, temper1, thick1);
@@ -112,6 +133,19 @@ namespace CP1
         }
         private void Alloy2changed(object sender, EventArgs e)
         {
+            if (kond2.Items.Count > 0)
+            {
+                kond2.ItemsSource.Clear();
+                kond2.SelectedIndex = -1;
+
+
+            }
+            if (kalınlık2.Items.Count > 0)
+            {
+                kalınlık2.ItemsSource.Clear();
+                kalınlık2.SelectedIndex = -1;
+
+            }
             var picker = (Picker)sender;
             var alloyname = (Alloy)picker.SelectedItem;
             alloy2 = alloyname.AlloyName.ToString();
@@ -120,28 +154,34 @@ namespace CP1
         }
         private void Temper2changed(object sender, EventArgs e)
         {
-            var picker = (Picker)sender;
-            var tempername2 = (Alloy)picker.SelectedItem;
-            temper2 = tempername2.Temper.ToString();
-            GetThickList2(alloy2, temper2);
+            if (kond2.SelectedIndex != -1)
+            {
+                var picker = (Picker)sender;
+                var tempername2 = (Alloy)picker.SelectedItem;
+                temper2 = tempername2.Temper.ToString();
+                GetThickList2(alloy2, temper2);
+            }
 
         }
         private void Thickness2changed(object sender, EventArgs e)
         {
-            var picker = (Picker)sender;
-            var thick = (Alloy)picker.SelectedItem;
-            thick2 = thick.Thickness.ToString();
-            GetSelectedRow2(alloy2, temper2, thick2);
-            var alllist = (Alloy)Row2.ItemsSource[0];
-
-            allproperties1.Add("TensileMax2", alllist.Tensile_Max.ToString());
-            allproperties1.Add("TensileMin2", alllist.Tensile_Min.ToString());
-            allproperties1.Add("YieldMax2", alllist.Yield_Max.ToString());
-            allproperties1.Add("YieldMin2", alllist.Yield_Min.ToString());
-            allproperties1.Add("ElogMin2", alllist.Elongation_Min.ToString());
-            allproperties1.Add("Bend1802", alllist.Bend_180.ToString());
-            allproperties1.Add("Bend902", alllist.Bend_90.ToString());
-            allproperties1.Add("Hardness2", alllist.Hardness.ToString());
+            if (kalınlık2.SelectedIndex != -1)
+            {
+                var picker = (Picker)sender;
+                var thick = (Alloy)picker.SelectedItem;
+                thick2 = thick.Thickness.ToString();
+                GetSelectedRow2(alloy2, temper2, thick2);
+                var alllist = (Alloy)Row2.ItemsSource[0];
+                allproperties2.Clear();
+                allproperties2.Add("TensileMax", alllist.Tensile_Max.ToString());
+                allproperties2.Add("TensileMin", alllist.Tensile_Min.ToString());
+                allproperties2.Add("YieldMax", alllist.Yield_Max.ToString());
+                allproperties2.Add("YieldMin", alllist.Yield_Min.ToString());
+                allproperties2.Add("ElogMin", alllist.Elongation_Min.ToString());
+                allproperties2.Add("Bend180", alllist.Bend_180.ToString());
+                allproperties2.Add("Bend90", alllist.Bend_90.ToString());
+                allproperties2.Add("Hardness", alllist.Hardness.ToString());
+            }
 
         }
 

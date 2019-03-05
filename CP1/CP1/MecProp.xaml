@@ -244,11 +244,15 @@
                             Text = "Sertlik&#x0a;HBW"
                             Grid.Row="0" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="StartAndExpand"
+                                BackgroundColor="White"
                                 Grid.Row="0" Grid.Column="1">
                             <Label
                                     x:Name="Hard"
                                     Text="Sert"
                                     FontSize="Medium"
+                                    TextColor="Black"
                                     VerticalOptions="CenterAndExpand"
                                     HorizontalOptions="CenterAndExpand"
                                     Grid.Row="0" Grid.Column="1"/>
@@ -485,7 +489,10 @@
                             Text = "Sertlik&#x0a;HBW"
                             Grid.Row="0" Grid.Column="0"/>
                         <Frame  OutlineColor="Black"
-                                Grid.Row="0" Grid.Column="1">
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="StartAndExpand"
+                                Grid.Row="0" Grid.Column="1"
+                                BackgroundColor="Transparent">
                             <Label
                                     x:Name="HardC"
                                     Text="Sert"

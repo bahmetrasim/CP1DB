@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using SQLite;
+using Android.Gms.Ads;
 
 namespace CP1.Droid
 {
@@ -21,6 +22,8 @@ namespace CP1.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            MobileAds.Initialize(ApplicationContext, "ca-app-pub-9496442035641158~4557840655");
+
             LoadApplication(new App());
         }
     }

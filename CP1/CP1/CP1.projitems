@@ -12,6 +12,7 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AdControlViews.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Alloy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AlloyDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
