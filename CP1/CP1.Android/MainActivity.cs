@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using SQLite;
+using Android.Gms.Ads;
 
 namespace CP1.Droid
 {
@@ -20,6 +21,9 @@ namespace CP1.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+
+            MobileAds.Initialize(ApplicationContext, "ca-app-pub-9496442035641158/7670378711");
+
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }

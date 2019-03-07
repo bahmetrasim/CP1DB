@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CP1.MainPage"
              xmlns:ads="clr-namespace:CP1;assembly-PluginsForXamarin"
+             xmlns:local2="clr-namespace:CP1.Ads"
              xmlns:local="clr-namespace:CP1">
   <Grid RowSpacing="0">
     <Grid.RowDefinitions>
@@ -44,7 +45,7 @@
       </StackLayout>
 
     </StackLayout>
-    <!--<local:AdControlViews BackgroundColor="Gray" Grid.Row="3"/>-->
+    <local2:AdMobView AdUnitId="{Binding AdUnitId}" Grid.Row="3" />
   </Grid>
 
 </ContentPage>
