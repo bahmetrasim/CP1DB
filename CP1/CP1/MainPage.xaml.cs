@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CP1.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,13 @@ namespace CP1
         public MainPage()
         {
             InitializeComponent();
+            AdMobControl admobcontrol = new AdMobControl()
+            {
+                AdUnitId = AppConstants.BannerId
+            };
+            //Label adLabel = new Label() { Text = "Ads Will Display" };
+            Content = new StackLayout()
+            { Children = { admobcontrol } };
             Material.Add("Aluminium", 2.713);
             Material.Add("Steel", 7.861);
             Material.Add("Stainless Steel", 7.85);

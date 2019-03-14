@@ -12,15 +12,15 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)AdBanner.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Alloy.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AlloyDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppConstants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CMS.xaml.cs">
       <DependentUpon>CMS.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)CalculateScreen1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AdMobControl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLite\ISQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

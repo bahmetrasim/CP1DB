@@ -44,9 +44,6 @@
         Clicked="OnButtonClicked" />
             </StackLayout>
         </StackLayout>
-        <local1:AdBanner Size="Standardbanner" 
-                             VerticalOptions="EndAndExpand"
-                             Grid.Row="1"
-                             BackgroundColor="Gray"/>
+        
     </Grid>
 </ContentPage>
