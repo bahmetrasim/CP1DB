@@ -2,9 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CP1.MainPage"
-             xmlns:ads="clr-namespace:CP1;assembly-PluginsForXamarin"
-             xmlns:local="clr-namespace:CP1"
-             xmlns:local1="clr-namespace:AdMob.CustomRenders">
+             xmlns:local="clr-namespace:CP1.Controls">
+
     <Grid RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -44,6 +43,8 @@
         Clicked="OnButtonClicked" />
             </StackLayout>
         </StackLayout>
+        
+    <local:AdMobControl AdUnitId="{Binding AdUnitId}" Grid.Row="1" BackgroundColor="Gray" />
         
     </Grid>
 </ContentPage>

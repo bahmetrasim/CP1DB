@@ -19,11 +19,11 @@ namespace CP1
             InitializeComponent();
             AdMobControl admobcontrol = new AdMobControl()
             {
-                AdUnitId = AppConstants.BannerId
+                AdUnitId = "ca-app-pub-9496442035641158/7670378711"
             };
             //Label adLabel = new Label() { Text = "Ads Will Display" };
-            Content = new StackLayout()
-            { Children = { admobcontrol } };
+            //Content = new StackLayout()
+            //{ Children = { admobcontrol }};
             Material.Add("Aluminium", 2.713);
             Material.Add("Steel", 7.861);
             Material.Add("Stainless Steel", 7.85);
