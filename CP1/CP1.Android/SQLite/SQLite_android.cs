@@ -13,7 +13,7 @@ using SQLite;
 using System.Threading.Tasks;
 using System.IO;
 using CP1.Droid.SQLite;
-using Foundation;
+
 
 [assembly: Dependency(typeof(SQLite_android))]
 namespace CP1.Droid.SQLite
