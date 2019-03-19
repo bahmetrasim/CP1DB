@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CP1.MainPage"
-             xmlns:ads="clr-namespace:CP1;assembly-PluginsForXamarin"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
              xmlns:local="clr-namespace:CP1">
   <Grid RowSpacing="0">
     <Grid.RowDefinitions>
@@ -44,7 +44,9 @@
       </StackLayout>
 
     </StackLayout>
-    <!--<local:AdControlViews BackgroundColor="Gray" Grid.Row="3"/>-->
+    <controls:AdView BackgroundColor="Gray" Grid.Row="3" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"
+                     PersonalizedAds="true" AdsId="ca-app-pub-9496442035641158/7670378711"
+                     x:Name="myAds"/>
   </Grid>
 
 </ContentPage>
