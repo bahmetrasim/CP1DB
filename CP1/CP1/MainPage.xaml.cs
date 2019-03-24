@@ -16,7 +16,6 @@ namespace CP1
         public MainPage()
         {
             InitializeComponent();
-            this.BindingContext = new Ads.MainPageViewModel();
             Material.Add("Aluminium", 2.713);
             Material.Add("Steel", 7.861);
             Material.Add("Stainless Steel", 7.85);
