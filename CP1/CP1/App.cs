@@ -9,7 +9,7 @@ namespace CP1
 {
     public class App : Application
     {
-        public static AlloyDatabase database { get; private set;}
+       
 
         public App()
         {
