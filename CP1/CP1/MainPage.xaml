@@ -1,29 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CP1.MainPage"
-             xmlns:ads="clr-namespace:CP1;assembly-PluginsForXamarin"
-             xmlns:local2="clr-namespace:CP1.Ads"
-             xmlns:local="clr-namespace:CP1">
-  <Grid RowSpacing="0">
-    <Grid.RowDefinitions>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="*" />
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
-    </Grid.RowDefinitions>
+             xmlns:local="clr-namespace:CP1"
+             x:Class="CP1.MainPage">
 
-    <StackLayout
-        Grid.Row="0"
-        HorizontalOptions="Fill"
-        VerticalOptions="Fill">
-      <!-- Place new controls here -->
-      <StackLayout>
-        <Picker x:Name="picker"
-            Title="Malzemeyi Seçiniz"
-            SelectedIndexChanged="OnPickerSelectedIndexChanged">
+    <StackLayout>
+        <!-- Place new controls here -->
+        <StackLayout>
+            <Picker x:Name="picker" 
+                    Title="Malzemeyi Seçiniz" 
+                    SelectedIndexChanged="OnPickerSelectedIndexChanged">
 
-          <!--<Picker.ItemsSource>
+                <!--<Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Aluminium</x:String>
                         <x:String>Steel</x:String>
@@ -32,20 +20,27 @@
                     </x:Array>
                 </Picker.ItemsSource>-->
 
-        </Picker>
-        <Label x:Name="Mat"
-    Text="{Binding Source={x:Reference picker}, Path=SelectedItem}"/>
-      </StackLayout>
+            </Picker>
+            <Label x:Name="Mat" 
+            Text="{Binding Source={x:Reference picker}, Path=SelectedItem}"/>
 
-      <StackLayout>
-        <Button Text="Click to Calculate"
-        BackgroundColor="Accent"
-        TextColor="Black"
-        Clicked="OnButtonClicked" />
-      </StackLayout>
+        </StackLayout>
+
+        <StackLayout>
+
+            <Button Text="Click to Calculate"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Accent"
+                TextColor="Black"
+                Clicked="OnButtonClicked" />
+
+        </StackLayout>
+        <Label Text="Welcome" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
 
     </StackLayout>
-    <local2:AdMobView AdUnitId="{Binding AdUnitId}" Grid.Row="3" />
-  </Grid>
 
 </ContentPage>
