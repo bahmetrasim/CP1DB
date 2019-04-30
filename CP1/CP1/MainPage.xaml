@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
              xmlns:local="clr-namespace:CP1"
              x:Class="CP1.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
+         <!--Place new controls here--> 
         <StackLayout>
             <Picker x:Name="picker" 
                     Title="Malzemeyi Seçiniz" 
@@ -40,7 +41,25 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
 
+        <!--<controls:AdView PersonalizedAds="true" AdsId="ca-app-pub-9496442035641158/7670378711"
+                         BackgroundColor="Gray"
+                         VerticalOptions="EndAndExpand">
+            
+        </controls:AdView>-->
 
+        <StackLayout
+            BackgroundColor="Aqua"
+            HeightRequest="200">
+
+            <controls:AdView x:Name="myads" 
+                             PersonalizedAds="true" 
+                             AdsId="ca-app-pub-9496442035641158/7670378711"
+                            BackgroundColor="Gray"
+                            VerticalOptions="End">
+            
+        </controls:AdView>
+        </StackLayout>
+        
     </StackLayout>
 
 </ContentPage>

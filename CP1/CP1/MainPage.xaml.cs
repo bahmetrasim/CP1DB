@@ -26,6 +26,7 @@ namespace CP1
                 picker.Items.Add(ChooseMat);
             }
         }
+
         void OnPickerSelectedIndexChanged(object sender, EventArgs e)
         {
             var picker = (Picker)sender;
