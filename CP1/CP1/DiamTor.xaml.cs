@@ -50,7 +50,7 @@ namespace CP1
                 
                 if (width < 101)
                 {
-                    TMin.Text = allproperties1["EN0K"];
+                    TMin.Text = allproperties1["En0K"];
                     TMax.Text = allproperties1["En100K"];
                     WMin.Text = allproperties1["En0G"];
                     WMax.Text = allproperties1["En100G"];
@@ -59,7 +59,7 @@ namespace CP1
                 }
                 else if (width < 301)
                 {
-                    TMin.Text = allproperties1["EN101K"];
+                    TMin.Text = allproperties1["En101K"];
                     TMax.Text = allproperties1["En300K"];
                     WMin.Text = allproperties1["En101G"];
                     WMax.Text = allproperties1["En300G"];
@@ -69,7 +69,7 @@ namespace CP1
 
                 else if (width < 501)
                 {
-                    TMin.Text = allproperties1["EN301K"];
+                    TMin.Text = allproperties1["En301K"];
                     TMax.Text = allproperties1["En500K"];
                     WMin.Text = allproperties1["En301G"];
                     WMax.Text = allproperties1["En500G"];
@@ -79,7 +79,7 @@ namespace CP1
 
                 else if (width < 1001)
                 {
-                    TMin.Text = allproperties1["EN501K"];
+                    TMin.Text = allproperties1["En501K"];
                     TMax.Text = allproperties1["En1000K"];
                     WMin.Text = allproperties1["En501G"];
                     WMax.Text = allproperties1["En1000G"];
@@ -90,7 +90,7 @@ namespace CP1
 
                 else if (width < 1251)
                 {
-                    TMin.Text = allproperties1["EN1001K"];
+                    TMin.Text = allproperties1["En1001K"];
                     TMax.Text = allproperties1["En1250K"];
                     WMin.Text = allproperties1["En1001G"];
                     WMax.Text = allproperties1["En1250G"];
@@ -99,7 +99,7 @@ namespace CP1
                 }
                 else if (width <= 1600)
                 {
-                    TMin.Text = allproperties1["EN1251K"];
+                    TMin.Text = allproperties1["En1251K"];
                     TMax.Text = allproperties1["En1600K"];
                     WMin.Text = allproperties1["En1251G"];
                     WMax.Text = allproperties1["En1600G"];
