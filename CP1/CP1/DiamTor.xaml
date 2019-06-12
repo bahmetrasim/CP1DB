@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Grid
-                x:Name="Labelsandbuttons">
+                x:Name="Labelsandbuttons" Padding="10,10,10,10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
