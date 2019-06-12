@@ -97,7 +97,7 @@ namespace CP1
                     LMin.Text = allproperties1["En1001U"];
                     LMax.Text = allproperties1["En1250U"];
                 }
-                else
+                else if (width <= 1600)
                 {
                     TMin.Text = allproperties1["EN1251K"];
                     TMax.Text = allproperties1["En1600K"];
@@ -105,7 +105,10 @@ namespace CP1
                     WMax.Text = allproperties1["En1600G"];
                     LMin.Text = allproperties1["En1251U"];
                     LMax.Text = allproperties1["En1600U"];
-
+                }
+                else
+                {
+                    await DisplayAlert("Uyarı", "Lütfen 1600mm'den Daha Küçük Bir En Giriniz", "OK");
                 }
             }
             else

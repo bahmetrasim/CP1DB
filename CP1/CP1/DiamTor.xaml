@@ -55,6 +55,7 @@
                             ClassId="En"
                             Text=""
                             TextChanged="Tchanged"
+                            WidthRequest="100"
                             HorizontalTextAlignment="Center"
                             Grid.Row="1" Grid.Column="1"
                             VerticalOptions="CenterAndExpand"
