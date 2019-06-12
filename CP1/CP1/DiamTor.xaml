@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CP1.DiamTor">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid
+                x:Name="Labelsandbuttons">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!--Label ve Combobox için 1. Bölüm-->
+                <Grid
+                  x:Name="choose3" 
+                  RowSpacing="1" ColumnSpacing="1"
+                  Grid.Row="0" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <!--Kalınlık-->
+                    <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Kalınlık"
+                            Grid.Row="0" Grid.Column="0"/>
+                    <Picker 
+                            x:Name="KalSec"
+                            Title="Kalınlık Seçiniz"
+                            SelectedIndexChanged="ThiknessChanged2"
+                            Grid.Row="0" Grid.Column="1"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand">
+                        <Picker.ItemDisplayBinding>
+                            <Binding Path="Thick" />
+                        </Picker.ItemDisplayBinding>
+                    </Picker>
+                    <!--En-->
+                    <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "En"
+                            Grid.Row="1" Grid.Column="0"/>
+                    <Entry 
+                            x:Name="En"
+                            ClassId="En"
+                            Text=""
+                            TextChanged="Tchanged"
+                            HorizontalTextAlignment="Center"
+                            Grid.Row="1" Grid.Column="1"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand">
+                    </Entry>
+
+                </Grid>
+
+                <!--Label ve Combobox için 2. Bölüm-->
+                <Grid
+                  x:Name="result3" Padding="5,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1"
+                    Grid.Row="1" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--Tanımlar-->
+                    <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Text = "Min"
+                            FontSize="14"
+                            Grid.Row="0" Grid.Column="1"/>
+                    <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Text = "Max"
+                            FontSize="14"
+                            Grid.Row="0" Grid.Column="2"/>
+
+                    <!--Kalınlık Toleransı-->
+                    <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Kalınlık&#x0a;(mm)"
+                            Grid.Row="1" Grid.Column="0"/>
+                    <Frame  OutlineColor="Black"
+                                Grid.Row="1" Grid.Column="1"
+                                Padding="0">
+                        <Label
+                                    x:Name="TMin"
+                                    Text="Kmin"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="1" Grid.Column="1"/>
+                    </Frame>
+                    <Frame  OutlineColor="Black"
+                                Grid.Row="1" Grid.Column="2"
+                                Padding ="0">
+                        <Label
+                                    x:Name="TMax"
+                                    Text="KMax"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="1" Grid.Column="2"/>
+                    </Frame>
+                    <!--En Toleransı-->
+                    <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "En&#x0a;(mm)"
+                            Grid.Row="2" Grid.Column="0"/>
+                    <Frame  OutlineColor="Black"
+                                Grid.Row="2" Grid.Column="1"
+                                Padding="0">
+                        <Label
+                                    x:Name="WMin"
+                                    Text="EMin"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="2" Grid.Column="1"/>
+                    </Frame>
+                    <Frame  OutlineColor="Black"
+                                Grid.Row="2" Grid.Column="2"
+                                Padding="0">
+                        <Label
+                                    x:Name="WMax"
+                                    Text="EMax"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="2" Grid.Column="2"/>
+                    </Frame>
+                    <!--Boy Toleransı-->
+                    <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Boy&#x0a;(mm)"
+                            Grid.Row="3" Grid.Column="0"/>
+                    <Frame  OutlineColor="Black"
+                                Grid.Row="3" Grid.Column="1"
+                                Padding="0">
+                        <Label
+                                    x:Name="LMin"
+                                    Text="BMin"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="1" Grid.Column="1"/>
+                    </Frame>
+                    <Frame  OutlineColor="Black"
+                                Grid.Row="3" Grid.Column="2"
+                                Padding="0">
+                        <Label
+                                    x:Name="LMax"
+                                    Text="BMax"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="3" Grid.Column="2"/>
+                    </Frame>
+                </Grid>
+                <!--En Alt Butonlar-->
+
+                <!--Tolerans Göster-->
+                <Button
+                    Text="Tolerans&#x0a;Göster"
+                    x:Name="DTS"
+                    ClassId="DTS"
+                    Clicked="DTS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Medium"
+                    WidthRequest="200"
+                    Grid.Row="2" Grid.Column="0"/>
+                <Picker
+                    x:Name="Row1"
+                    ClassId="Row1cs"
+                    IsVisible="False"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,6 +2,7 @@
 using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xam.FormsPlugin.Abstractions;
 using SQLite;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]

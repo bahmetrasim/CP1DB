@@ -12,6 +12,6 @@ namespace CP1
     public interface ISQLite
     {
         Task<SQLiteConnection> GetConnection();
+        Task<SQLiteConnection> GetConnection2();
     }
-  
 }

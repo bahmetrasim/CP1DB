@@ -331,6 +331,24 @@
                     FontSize="9"
                     Grid.Row="4" Grid.Column="1"/>
 
+                <!--Tolerans Properties-->
+                <Label Text="Boyutsal Tolerans" 
+                Grid.Row="4" Grid.Column="2" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                <Button 
+                    Text="-Kalınlık&#x0a;-En"
+                    x:Name="DT"
+                    ClassId="DT"
+                    Clicked="DT_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    FontSize="9"
+                    Grid.Row="4" Grid.Column="2"/>
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>

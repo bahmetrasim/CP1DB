@@ -74,5 +74,10 @@ namespace CP1
         {
             await Navigation.PushAsync(new MecProp());
         }
+
+        private async void DT_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DiamTor());
+        }
     }
 }
