@@ -126,7 +126,7 @@ namespace CP1
             GetSelectedRow(thick);
 
             var alllist = (Diator)Row1.ItemsSource[0];
-
+            allproperties1.Clear();
             //Kalınlık
             allproperties1.Add("En0K", alllist.En0K.ToString());
             allproperties1.Add("En100K", alllist.En100K.ToString());
