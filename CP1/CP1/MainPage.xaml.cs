@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using CP1.Controls;
 
 namespace CP1
 {
@@ -16,6 +17,7 @@ namespace CP1
         public MainPage()
         {
             InitializeComponent();
+
             Material.Add("Aluminium", 2.713);
             Material.Add("Steel", 7.861);
             Material.Add("Stainless Steel", 7.85);

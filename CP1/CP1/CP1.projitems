@@ -12,6 +12,8 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AppConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AdmobControl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DiamTor.xaml.cs">
       <DependentUpon>DiamTor.xaml</DependentUpon>
       <SubType>Code</SubType>

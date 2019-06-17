@@ -15,19 +15,8 @@ namespace CP1
         public App()
         {
             MainPage = new NavigationPage(new MainPage());
-            //DatabasePath = databasePath;
+            
         }
-        //public static AlloyDatabase Database
-        //{
-        //    get
-        //    {
-        //        if (database == null)
-        //        {
-        //            database = new AlloyDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MTP.db3"));
-        //        }
-        //        return database;
-        //     }
-        //}
 
         public int ResumeAtTodoId { get; set; }
 

@@ -23,9 +23,11 @@ namespace CP1.Droid
 
             base.OnCreate(savedInstanceState);
 
-            MobileAds.Initialize(ApplicationContext, "ca-app-pub-9496442035641158~7155022718");
+            
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            MobileAds.Initialize(ApplicationContext, "ca-app-pub-9496442035641158~7155022718");
             LoadApplication(new App());
         }
 
