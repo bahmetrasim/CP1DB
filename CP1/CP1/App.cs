@@ -2,7 +2,6 @@
 using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xam.FormsPlugin.Abstractions;
 using SQLite;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,7 +14,6 @@ namespace CP1
         public App()
         {
             MainPage = new NavigationPage(new MainPage());
-            
         }
 
         public int ResumeAtTodoId { get; set; }

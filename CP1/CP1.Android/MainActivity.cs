@@ -8,7 +8,7 @@ using Android.Widget;
 using Android.OS;
 using SQLite;
 using Android.Gms.Ads;
-using Xam.FormsPlugin.Abstractions;
+
 
 namespace CP1.Droid
 {

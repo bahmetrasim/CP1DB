@@ -25,7 +25,6 @@
       <DependentUpon>CMS.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)CalculateScreen1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLite\ISQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
