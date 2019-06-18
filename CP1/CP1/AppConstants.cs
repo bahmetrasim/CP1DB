@@ -14,9 +14,9 @@ namespace CP1
                 switch (Device.RuntimePlatform)
                 {
                     case Device.Android:
-                        return "app-pub-3940256099942544~3347511713";
+                        return "ca-app-pub-3815590831760195~5715526881";
                     default:
-                        return "app-pub-3940256099942544~3347511713";
+                        return "ca-app-pub-3815590831760195~5715526881";
                 }
             }
         }
@@ -27,9 +27,9 @@ namespace CP1
                 switch (Device.RuntimePlatform)
                 {
                     case Device.Android:
-                        return "ca-app-pub-3940256099942544/6300978111";
+                        return "ca-app-pub-3815590831760195/4215754711";
                     default:
-                        return "ca-app-pub-3940256099942544/6300978111";
+                        return "ca-app-pub-3815590831760195/4215754711";
                 }
             }
         }

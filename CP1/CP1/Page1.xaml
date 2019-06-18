@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local2="clr-namespace:CP1.Controls"
              x:Class="CP1.Page1">
     <ContentPage.Content>
         <StackLayout>
@@ -350,6 +351,8 @@
                     Grid.Row="4" Grid.Column="2"/>
 
             </Grid>
+            <local2:AdMobControl AdUnitId="ca-app-pub-3815590831760195/4642118361"
+                                VerticalOptions="EndAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
