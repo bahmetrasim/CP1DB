@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local4="clr-namespace:CP1.Controls"
              x:Class="CP1.DiamTor">
     <ContentPage.Content>
         <StackLayout>
@@ -192,6 +193,10 @@
                     ClassId="Row1cs"
                     IsVisible="False"/>
             </Grid>
+            <StackLayout>
+                <local4:AdMobControl AdUnitId="ca-app-pub-3815590831760195/5286908209"
+                                VerticalOptions="EndAndExpand"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

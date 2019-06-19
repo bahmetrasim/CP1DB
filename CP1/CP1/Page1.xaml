@@ -8,11 +8,11 @@
             <Grid x:Name="controlGrid" Padding="5,10,10,10"
                   RowSpacing="1" ColumnSpacing="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
