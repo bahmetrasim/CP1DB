@@ -320,7 +320,7 @@
                 VerticalOptions="StartAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <Button 
-                    Text="-Alaşım&#x0a;-Kondüsyon"
+                    Text="-Alaşım&#x0a;-Kondüsyon&#x0a;-Kalınlık"
                     x:Name="MP"
                     ClassId="MP"
                     Clicked="MP_Clicked"

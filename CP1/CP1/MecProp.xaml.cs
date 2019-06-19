@@ -69,6 +69,8 @@ namespace CP1
         }
         private void Alloychanged(object sender, EventArgs e)
         {
+            kond.SelectedIndex = -1;
+            kalınlık.SelectedIndex = -1;
             var picker = (Picker)sender;
             var alloyname = (Alloy)picker.SelectedItem;
             alloy1 = alloyname.AlloyName.ToString();
@@ -77,6 +79,7 @@ namespace CP1
         }
         private void Temperchanged(object sender, EventArgs e)
         {
+            
             var picker = (Picker)sender;
             var tempername = (Alloy)picker.SelectedItem;
             temper1 = tempername.Temper.ToString();
@@ -84,6 +87,7 @@ namespace CP1
         }
         private void Thicknesschanged(object sender, EventArgs e)
         {
+            
             var picker = (Picker)sender;
             var thick = (Alloy)picker.SelectedItem;
             thick1 = thick.Thickness.ToString();
@@ -111,6 +115,8 @@ namespace CP1
         }
         private void Alloy2changed(object sender, EventArgs e)
         {
+            kond2.SelectedIndex = -1;
+            kalınlık2.SelectedIndex = -1;
             var picker = (Picker)sender;
             var alloyname = (Alloy)picker.SelectedItem;
             alloy2 = alloyname.AlloyName.ToString();

@@ -10,6 +10,10 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.de.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.es.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.tr.resx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AppConstants.cs" />
