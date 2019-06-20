@@ -30,8 +30,9 @@
         <Label Text="Welcome" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
-
         <local1:AdMobControl AdUnitId="ca-app-pub-3815590831760195/4215754711"
+                                VerticalOptions="EndAndExpand"/>
+        <local1:AdMobControl AdUnitId="ca-app-pub-3815590831760195/7909094316"
                                 VerticalOptions="EndAndExpand"/>
     </StackLayout>
 

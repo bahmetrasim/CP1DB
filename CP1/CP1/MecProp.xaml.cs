@@ -69,12 +69,10 @@ namespace CP1
         }
         private void Alloychanged(object sender, EventArgs e)
         {
-            kond.SelectedIndex = -1;
-            kalınlık.SelectedIndex = -1;
+            
             var picker = (Picker)sender;
             var alloyname = (Alloy)picker.SelectedItem;
             alloy1 = alloyname.AlloyName.ToString();
-
             GetTemperList(alloy1);
         }
         private void Temperchanged(object sender, EventArgs e)
@@ -115,8 +113,7 @@ namespace CP1
         }
         private void Alloy2changed(object sender, EventArgs e)
         {
-            kond2.SelectedIndex = -1;
-            kalınlık2.SelectedIndex = -1;
+           
             var picker = (Picker)sender;
             var alloyname = (Alloy)picker.SelectedItem;
             alloy2 = alloyname.AlloyName.ToString();
@@ -152,6 +149,7 @@ namespace CP1
 
         private async void GetAlloyList()
         {
+
             _sqliteconnection = await DependencyService.Get<ISQLite>().GetConnection();
             var alloylist = _sqliteconnection.Query<Alloy>("Select distinct AlloyName From Alloy").ToList();
             alasim.ItemsSource = alloylist;
@@ -160,6 +158,8 @@ namespace CP1
 
         private async void GetTemperList(string SelectedAlloy)
         {
+            if(kond.Items.Count !=0 )
+            { kond.Items.Clear(); }
             _sqliteconnection = await DependencyService.Get<ISQLite>().GetConnection();
             var temperlist = _sqliteconnection.Query<Alloy>("select distinct Temper From Alloy Where AlloyName = ?", SelectedAlloy).ToList();
             kond.ItemsSource = temperlist;
@@ -167,6 +167,8 @@ namespace CP1
 
         private async void GetThickList(string SelectedAlloy, string SelectedTemper)
         {
+            if (kalınlık.Items.Count != 0)
+            { kalınlık.Items.Clear(); }
             _sqliteconnection = await DependencyService.Get<ISQLite>().GetConnection();
             var thicklist = _sqliteconnection.Query<Alloy>("select Thickness From Alloy Where AlloyName = ? and Temper = ?", SelectedAlloy, SelectedTemper).ToList();
             kalınlık.ItemsSource = thicklist;
@@ -174,6 +176,8 @@ namespace CP1
 
         private async void GetTemperList2(string SelectedAlloy)
         {
+            if (kond2.Items.Count != 0)
+            { kond2.Items.Clear(); }
             _sqliteconnection = await DependencyService.Get<ISQLite>().GetConnection();
             var temperlist2 = _sqliteconnection.Query<Alloy>("select distinct Temper From Alloy Where AlloyName = ?", SelectedAlloy).ToList();
             kond2.ItemsSource = temperlist2;
@@ -181,6 +185,8 @@ namespace CP1
 
         private async void GetThickList2(string SelectedAlloy, string SelectedTemper)
         {
+            if (kalınlık2.Items.Count != 0)
+            { kalınlık2.Items.Clear(); }
             _sqliteconnection = await DependencyService.Get<ISQLite>().GetConnection();
             var thicklist2 = _sqliteconnection.Query<Alloy>("select Thickness From Alloy Where AlloyName = ? and Temper = ?", SelectedAlloy, SelectedTemper).ToList();
             kalınlık2.ItemsSource = thicklist2;
