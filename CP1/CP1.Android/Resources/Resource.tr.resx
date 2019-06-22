@@ -117,127 +117,127 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MP-CAL" xml:space="preserve">
+  <data name="MPCAL" xml:space="preserve">
     <value>Hesaplamaya Başla</value>
   </data>
-  <data name="MP-MS" xml:space="preserve">
+  <data name="MPMS" xml:space="preserve">
     <value>Malzemeyi Seçiniz</value>
   </data>
-  <data name="MP-W" xml:space="preserve">
+  <data name="MPW" xml:space="preserve">
     <value>Hoşgeldiniz...</value>
   </data>
-  <data name="PG1-DT" xml:space="preserve">
+  <data name="PG1DT" xml:space="preserve">
     <value>Boyut. Tolerans</value>
   </data>
-  <data name="PG1-DT-B" xml:space="preserve">
+  <data name="PG1DTB" xml:space="preserve">
     <value>-Kalınlık&amp;#x0a;-En</value>
   </data>
-  <data name="PG1-FL1" xml:space="preserve">
+  <data name="PG1FL1" xml:space="preserve">
     <value>Film Metrajı-1</value>
   </data>
-  <data name="PG1-FL1-B" xml:space="preserve">
+  <data name="PG1FL1B" xml:space="preserve">
     <value>-F.In.Dia&amp;#x0a;-F.Out.Dia&amp;#x0a;-F.Thickness</value>
   </data>
-  <data name="PG1-FL2" xml:space="preserve">
+  <data name="PG1FL2" xml:space="preserve">
     <value>Film Metrajı-2</value>
   </data>
-  <data name="PG1-FL2-B" xml:space="preserve">
+  <data name="PG1FL2B" xml:space="preserve">
     <value>-F.Miktar&amp;#x0a;-F.Kalınlık&amp;#x0a;-F.En</value>
   </data>
-  <data name="PG1-FW1" xml:space="preserve">
-    <value>Film Weight Calc-1</value>
+  <data name="PG1FW1" xml:space="preserve">
+    <value>Film Ağırlığı-1</value>
   </data>
-  <data name="PG1-FW1-B" xml:space="preserve">
-    <value>-F.In.Dia&amp;#x0a;-F.Out.Dia&amp;#x0a;-F.Thickness</value>
+  <data name="PG1FW1B" xml:space="preserve">
+    <value>-F.İç Çap&amp;#x0a;-F.Dış Çap&amp;#x0a;-F.Kalınlık</value>
   </data>
-  <data name="PG1-FW2" xml:space="preserve">
-    <value>Film Weight Calc-2</value>
+  <data name="PG1FW2" xml:space="preserve">
+    <value>Film Ağırlığı-2</value>
   </data>
-  <data name="PG1-FW2-B" xml:space="preserve">
-    <value>-F.Length&amp;#x0a;-F.Thick&amp;#x0a;-F.Width</value>
+  <data name="PG1FW2B" xml:space="preserve">
+    <value>-F.Metraj&amp;#x0a;-F.Kalınlık&amp;#x0a;-F.En</value>
   </data>
-  <data name="PG1-ID1" xml:space="preserve">
-    <value>Inner Dia Calc-1</value>
+  <data name="PG1ID1" xml:space="preserve">
+    <value>İç Çap Hesabı-1</value>
   </data>
-  <data name="PG1-ID1-B" xml:space="preserve">
-    <value>-Weight&amp;#x0a;-Out.Dia&amp;#x0a;-Width</value>
+  <data name="PG1ID1B" xml:space="preserve">
+    <value>-Miktar&amp;#x0a;-Dış Çap&amp;#x0a;-En</value>
   </data>
-  <data name="PG1-ID2" xml:space="preserve">
-    <value>Inner Dia Calc-2</value>
+  <data name="PG1ID2" xml:space="preserve">
+    <value>İç Çap Hesabı-1</value>
   </data>
-  <data name="PG1-ID2-B" xml:space="preserve">
-    <value>-Length&amp;#x0a;-Out.Dia&amp;#x0a;-Thickness</value>
+  <data name="PG1ID2B" xml:space="preserve">
+    <value>-Metraj&amp;#x0a;-Dış Çap&amp;#x0a;-Kalınlık</value>
   </data>
-  <data name="PG1-IU" xml:space="preserve">
-    <value>I-Unit Calc</value>
+  <data name="PG1IU" xml:space="preserve">
+    <value>I-Unit Hesabı</value>
   </data>
-  <data name="PG1-IU-B" xml:space="preserve">
-    <value>I-Unit Calc</value>
+  <data name="PG1IUB" xml:space="preserve">
+    <value>-Dalga Boyu&amp;#x0a;-Dalga Yüksek</value>
   </data>
-  <data name="PG1-L1" xml:space="preserve">
-    <value>Length Calc-1</value>
+  <data name="PG1L1" xml:space="preserve">
+    <value>Metraj Hesabı-1</value>
   </data>
-  <data name="PG1-L1-B" xml:space="preserve">
-    <value>-In.Dia&amp;#x0a;-Out.Dia&amp;#x0a;-Thickness</value>
+  <data name="PG1L1B" xml:space="preserve">
+    <value>-İç Çap&amp;#x0a;-Dış Çap&amp;#x0a;-Kalınlık</value>
   </data>
-  <data name="PG1-L2" xml:space="preserve">
-    <value>Length Calc-2</value>
+  <data name="PG1L2" xml:space="preserve">
+    <value>Metraj Hesabı-2</value>
   </data>
-  <data name="PG1-L2-B" xml:space="preserve">
-    <value>-Weight&amp;#x0a;-Width&amp;#x0a;-Thickness</value>
+  <data name="PG1L2B" xml:space="preserve">
+    <value>-Miktar&amp;#x0a;-En&amp;#x0a;-Kalınlık</value>
   </data>
-  <data name="PG1-MP" xml:space="preserve">
-    <value>Mech. Prop</value>
+  <data name="PG1MP" xml:space="preserve">
+    <value>Mek. Özellikler</value>
   </data>
-  <data name="PG1-MP-B" xml:space="preserve">
-    <value>-Alloy&amp;#x0a;-Temper&amp;#x0a;-Thickness</value>
+  <data name="PG1MPB" xml:space="preserve">
+    <value>-Alaşım&amp;#x0a;-Kondüsyon&amp;#x0a;-Kalınlık</value>
   </data>
-  <data name="PG1-OD1" xml:space="preserve">
-    <value>Outer Dia Calc-1</value>
+  <data name="PG1OD1" xml:space="preserve">
+    <value>Dış Çap Hesabı-1</value>
   </data>
-  <data name="PG1-OD1-B" xml:space="preserve">
-    <value>-In.Dia&amp;#x0a;-Width&amp;#x0a;-Weight</value>
+  <data name="PG1OD1B" xml:space="preserve">
+    <value>-İç Çap&amp;#x0a;-En&amp;#x0a;-Miktar</value>
   </data>
-  <data name="PG1-OD2" xml:space="preserve">
-    <value>Outer Dia Calc-2</value>
+  <data name="PG1OD2" xml:space="preserve">
+    <value>Dış Çap Hesabı-2</value>
   </data>
-  <data name="PG1-OD2-B" xml:space="preserve">
-    <value>-In.Dia&amp;#x0a;-Length&amp;#x0a;-Thickness</value>
+  <data name="PG1OD2B" xml:space="preserve">
+    <value>-İç Çap&amp;#x0a;-Metraj&amp;#x0a;-Kalınlık</value>
   </data>
-  <data name="PG1-P1" xml:space="preserve">
-    <value>Paint Calc-1</value>
+  <data name="PG1P1" xml:space="preserve">
+    <value>Boya  Hesabı-1</value>
   </data>
-  <data name="PG1-P1-B" xml:space="preserve">
-    <value>-Weight&amp;#x0a;-Thickness&amp;#x0a;-Paint Thick.&amp;#x0a;-Coverage</value>
+  <data name="PG1P1B" xml:space="preserve">
+    <value>-Miktar&amp;#x0a;-Kalınlık&amp;#x0a;-Boya Kal&amp;#x0a;-Kaplama</value>
   </data>
-  <data name="PG1-P2" xml:space="preserve">
-    <value>Paint Calc-2</value>
+  <data name="PG1P2" xml:space="preserve">
+    <value>Boya  Hesabı-2</value>
   </data>
-  <data name="PG1-P2-B" xml:space="preserve">
-    <value>-Weight&amp;#x0a;-Paint Type&amp;#x0a;-Mat.Thick.&amp;#x0a;-Paint Thick.</value>
+  <data name="PG1P2B" xml:space="preserve">
+    <value>-Miktar&amp;#x0a;-Boya Cins&amp;#x0a;-Kalınlık&amp;#x0a;-Boya Kal</value>
   </data>
-  <data name="PG1-T1" xml:space="preserve">
-    <value>Thickness Calc-1</value>
+  <data name="PG1T1" xml:space="preserve">
+    <value>Kalınlık Hesabı-1</value>
   </data>
-  <data name="PG1-T1-B" xml:space="preserve">
-    <value>-Weight&amp;#x0a;-Length&amp;#x0a;-Width</value>
+  <data name="PG1T1B" xml:space="preserve">
+    <value>-Miktar&amp;#x0a;-Metraj&amp;#x0a;-En</value>
   </data>
-  <data name="PG1-T2" xml:space="preserve">
-    <value>Thickness Calc-2</value>
+  <data name="PG1T2" xml:space="preserve">
+    <value>Kalınlık Hesabı-2</value>
   </data>
-  <data name="PG1-T2-B" xml:space="preserve">
-    <value>-In.Dia&amp;#x0a;-Out.Dia&amp;#x0a;-Length</value>
+  <data name="PG1T2B" xml:space="preserve">
+    <value>-İç Çap&amp;#x0a;-Dış Çap&amp;#x0a;-Metraj</value>
   </data>
-  <data name="PG1-W1" xml:space="preserve">
-    <value>Weight Calc-1</value>
+  <data name="PG1W1" xml:space="preserve">
+    <value>Miktar Hesabı-1</value>
   </data>
-  <data name="PG1-W1-B" xml:space="preserve">
-    <value>-Length&amp;#x0a;-Width&amp;#x0a;-Thickness</value>
+  <data name="PG1W1B" xml:space="preserve">
+    <value>-Metraj&amp;#x0a;-En&amp;#x0a;-Kalınlık</value>
   </data>
-  <data name="PG1-W2" xml:space="preserve">
-    <value>Weight Calc-2</value>
+  <data name="PG1W2" xml:space="preserve">
+    <value>Miktar Hesabı-2</value>
   </data>
-  <data name="PG1-W2-B" xml:space="preserve">
-    <value>-In.Dia&amp;#x0a;-Out.Dia&amp;#x0a;-Width</value>
+  <data name="PG1W2B" xml:space="preserve">
+    <value>-İç Çap&amp;#x0a;-Dış Çap&amp;#x0a;-En</value>
   </data>
 </root>

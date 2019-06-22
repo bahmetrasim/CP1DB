@@ -10,10 +10,12 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.de.resx" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.es.resx" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.resx" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.tr.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.tr.resw">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.resw">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AppConstants.cs" />
@@ -29,6 +31,10 @@
       <DependentUpon>CMS.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Languages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\PlatformCulture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ILocalize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\TranslateExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLite\ISQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
