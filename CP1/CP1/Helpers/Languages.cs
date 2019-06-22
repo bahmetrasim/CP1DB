@@ -2,7 +2,7 @@
 {
     using Xamarin.Forms;
     using Interfaces;
-    using Resources;
+    using CP1.Resources;
 
     public static class Languages
     {

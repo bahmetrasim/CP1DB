@@ -10,10 +10,10 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.tr.resw">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.tr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.resw">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Resource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -68,6 +68,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
     <Folder Include="$(MSBuildThisFileDirectory)SQLite\" />
   </ItemGroup>
   <ItemGroup>

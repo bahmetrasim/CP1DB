@@ -1,4 +1,4 @@
-﻿namespace CP1.Helpers
+﻿namespace CP1.Resources
 {
     using System;
     using System.Globalization;
