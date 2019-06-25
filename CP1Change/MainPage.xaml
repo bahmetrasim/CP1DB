@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local1="clr-namespace:CP1.Controls"
+             x:Class="CP1.MainPage">
+
+    <StackLayout>
+        <!--Place new controls here-->
+        <StackLayout>
+            <Picker x:Name="picker" 
+                    Title="Malzemeyi Seçiniz" 
+                    SelectedIndexChanged="OnPickerSelectedIndexChanged">
+
+            </Picker>
+            <Label x:Name="Mat" 
+            Text="{Binding Source={x:Reference picker}, Path=SelectedItem}"/>
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <Button Text="Click to Calculate"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Accent"
+                TextColor="Black"
+                Clicked="OnButtonClicked" />
+
+        </StackLayout>
+        <Label Text="Welcome" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <local1:AdMobControl AdUnitId="ca-app-pub-3815590831760195/4215754711"
+                                VerticalOptions="EndAndExpand"/>
+        <local1:AdMobControl AdUnitId="ca-app-pub-3815590831760195/7909094316"
+                                VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+
+</ContentPage>

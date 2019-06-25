@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CP1.MecProp">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid
+                x:Name="Labelsandbuttons">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="550" />
+                    <RowDefinition Height="110" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <!--Çoklu Seçim İçin-->
+                <Grid
+                x:Name="show" Padding="5,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1"
+                    Grid.Row="0" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="300" />
+                        <RowDefinition Height="60" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--Label ve Combobox için 1. Bölüm-->
+                    <Grid
+                        x:Name="choose" Padding="5,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1"
+                    Grid.Row="0" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <!--Alaşım-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Alasim"
+                            Grid.Row="0" Grid.Column="0"/>
+                        <Picker 
+                            x:Name="alasim"
+                            Title="Alaşımı Seçiniz"
+                            SelectedIndexChanged="Alloychanged"
+                            Grid.Row="0" Grid.Column="1"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand">
+                            <Picker.ItemDisplayBinding>
+                            <Binding Path="AlloyName" />
+                            </Picker.ItemDisplayBinding>
+                        </Picker>
+                        <!--Kondüsyon-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Kondüsyon"
+                            Grid.Row="1" Grid.Column="0"/>
+                        <Picker 
+                            x:Name="kond"
+                            Title="Kondüsyon Seçiniz"
+                            SelectedIndexChanged="Temperchanged"
+                            Grid.Row="1" Grid.Column="1"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand">
+                            <Picker.ItemDisplayBinding>
+                                <Binding Path="Temper" />
+                            </Picker.ItemDisplayBinding>
+                        </Picker>
+                        <!--Kalınlık-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Kalınlık"
+                            Grid.Row="2" Grid.Column="0"/>
+                        <Picker 
+                            x:Name="kalınlık"
+                            Title="Kalınlık Seçiniz"
+                            SelectedIndexChanged="Thicknesschanged"
+                            Grid.Row="2" Grid.Column="1"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand">
+                            <Picker.ItemDisplayBinding>
+                                <Binding Path="Thickness" />
+                            </Picker.ItemDisplayBinding>
+                        </Picker>
+                    </Grid>
+
+                    <!--Label ve Combobox için 2. Bölüm-->
+                    <Grid
+                        x:Name="result1" Padding="5,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1"
+                    Grid.Row="1" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <!--Tanımlar-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Text = "Min&#x0a;(90°)"
+                            FontSize="14"
+                            Grid.Row="0" Grid.Column="1"/>
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Text = "Max&#x0a;(180°)"
+                            FontSize="14"
+                            Grid.Row="0" Grid.Column="2"/>
+
+                        <!--Çekme Kuvveti-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Çekme&#x0a;(MPa)"
+                            Grid.Row="1" Grid.Column="0"/>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="1" Grid.Column="1"
+                                Padding="0">
+                            <Label
+                                    x:Name="TMin"
+                                    Text="CMin"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="1" Grid.Column="1"/>
+                        </Frame>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="1" Grid.Column="2"
+                                Padding ="0">
+                            <Label
+                                    x:Name="TMax"
+                                    Text="CMax"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="1" Grid.Column="2"/>
+                        </Frame>
+                        <!--Akma Kuvveti-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Akma&#x0a;(MPa)"
+                            Grid.Row="2" Grid.Column="0"/>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="2" Grid.Column="1"
+                                Padding="0">
+                            <Label
+                                    x:Name="YMin"
+                                    Text="AMin"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="2" Grid.Column="1"/>
+                        </Frame>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="2" Grid.Column="2"
+                                Padding="0">
+                            <Label
+                                    x:Name="YMax"
+                                    Text="AMax"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="2" Grid.Column="2"/>
+                        </Frame>
+                        <!--Elongation-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Uzama&#x0a;(%)"
+                            Grid.Row="3" Grid.Column="0"/>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="3" Grid.Column="1"
+                                Padding="0">
+                            <Label
+                                    x:Name="EMin"
+                                    Text="UMin"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="1" Grid.Column="1"/>
+                        </Frame>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="3" Grid.Column="2"
+                                Padding="0">
+                            <Label
+                                    x:Name="EMax"
+                                    Text="UMax"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="3" Grid.Column="2"/>
+                        </Frame>
+                        <!--Bükme-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Bükme&#x0a;(t)"
+                            Grid.Row="4" Grid.Column="0"/>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="4" Grid.Column="1"
+                                Padding="0">
+                            <Label
+                                    x:Name="B90"
+                                    Text="B90"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="4" Grid.Column="1"/>
+                        </Frame>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="4" Grid.Column="2"
+                                Padding="0">
+                            <Label
+                                    x:Name="B180"
+                                    Text="B180"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="4" Grid.Column="2"/>
+                        </Frame>
+                    </Grid>
+                    <!--Label ve Combobox için 3. Bölüm-->
+                    <Grid
+                        x:Name="result2" Padding="5,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1"
+                    Grid.Row="2" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <!--Hardness-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Sertlik&#x0a;HBW"
+                            Grid.Row="0" Grid.Column="0"/>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="0" Grid.Column="1"
+                                Padding="0">
+                            <Label
+                                    x:Name="Hard"
+                                    Text="Sert"
+                                    FontSize="Medium"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="0" Grid.Column="1"/>
+                        </Frame>
+                    </Grid>
+                </Grid>
+
+                <!--Compare Methodu İçin-->
+                <Grid
+                x:Name="show2" Padding="5,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1"
+                    Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="300" />
+                        <RowDefinition Height="60" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--Label ve Combobox için 1. Bölüm-->
+                    <Grid
+                        x:Name="choose2" Padding="5,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1"
+                    Grid.Row="0" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <!--Alaşım-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Alasim"
+                            Grid.Row="0" Grid.Column="0"/>
+                        <Picker 
+                            x:Name="alasim2"
+                            Title="Alaşımı Seçiniz"
+                            SelectedIndexChanged="Alloy2changed"
+                            Grid.Row="0" Grid.Column="1"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand">
+                            <Picker.ItemDisplayBinding>
+                                <Binding Path="AlloyName" />
+                            </Picker.ItemDisplayBinding>
+                        </Picker>
+                        <!--Kondüsyon-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Kondüsyon"
+                            Grid.Row="1" Grid.Column="0"/>
+                        <Picker 
+                            x:Name="kond2"
+                            Title="Kondüsyon Seçiniz"
+                            SelectedIndexChanged="Temper2changed"
+                            Grid.Row="1" Grid.Column="1"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand">
+                            <Picker.ItemDisplayBinding>
+                                <Binding Path="Temper" />
+                            </Picker.ItemDisplayBinding>
+                        </Picker>
+                        <!--Kalınlık-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Kalınlık"
+                            Grid.Row="2" Grid.Column="0"/>
+                        <Picker 
+                            x:Name="kalınlık2"
+                            Title="Kalınlık Seçiniz"
+                            SelectedIndexChanged="Thickness2changed"
+                            Grid.Row="2" Grid.Column="1"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand">
+                            <Picker.ItemDisplayBinding>
+                                <Binding Path="Thickness" />
+                            </Picker.ItemDisplayBinding>
+                        </Picker>
+                    </Grid>
+
+                    <!--Label ve Combobox için 2. Bölüm-->
+                    <Grid
+                        x:Name="result1c" Padding="5,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1"
+                    Grid.Row="1" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--Tanımlar-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Text = "Min&#x0a;(90°)"
+                            FontSize="14"
+                            Grid.Row="0" Grid.Column="1"/>
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Text = "Max&#x0a;(180°)"
+                            FontSize="14"
+                            Grid.Row="0" Grid.Column="2"/>
+
+                        <!--Çekme Kuvveti-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Çekme&#x0a;(MPa)"
+                            Grid.Row="1" Grid.Column="0"/>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="1" Grid.Column="1"
+                                Padding="0">
+                            <Label
+                                    x:Name="TMinC"
+                                    Text="CMin"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="1" Grid.Column="1"/>
+                        </Frame>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="1" Grid.Column="2"
+                                Padding="0">
+                            <Label
+                                    x:Name="TMaxC"
+                                    Text="CMax"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="1" Grid.Column="2"/>
+                        </Frame>
+                        <!--Akma Kuvveti-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Akma&#x0a;(MPa)"
+                            Grid.Row="2" Grid.Column="0"/>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="2" Grid.Column="1"
+                                Padding="0">
+                            <Label
+                                    x:Name="YMinC"
+                                    Text="AMin"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="2" Grid.Column="1"/>
+                        </Frame>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="2" Grid.Column="2"
+                                Padding="0">
+                            <Label
+                                    x:Name="YMaxC"
+                                    Text="AMax"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="2" Grid.Column="2"/>
+                        </Frame>
+                        <!--Elongation-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Uzama&#x0a;(%)"
+                            Grid.Row="3" Grid.Column="0"/>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="3" Grid.Column="1"
+                                Padding="0">
+                            <Label
+                                    x:Name="EMinC"
+                                    Text="UMin"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="1" Grid.Column="1"/>
+                        </Frame>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="3" Grid.Column="2"
+                                Padding="0">
+                            <Label
+                                    x:Name="EMaxC"
+                                    Text="UMax"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="3" Grid.Column="2"/>
+                        </Frame>
+                        <!--Bükme-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Bükme&#x0a;(t)"
+                            Grid.Row="4" Grid.Column="0"/>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="4" Grid.Column="1"
+                                Padding="0">
+                            <Label
+                                    x:Name="B90C"
+                                    Text="B90"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="4" Grid.Column="1"/>
+                        </Frame>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="4" Grid.Column="2"
+                                Padding="0">
+                            <Label
+                                    x:Name="B180C"
+                                    Text="B180"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="4" Grid.Column="2"/>
+                        </Frame>
+                    </Grid>
+                    <!--Label ve Combobox için 3. Bölüm-->
+                    <Grid
+                        x:Name="result2c" Padding="5,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1"
+                    Grid.Row="2" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <!--Hardness-->
+                        <Label
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Text = "Sertlik&#x0a;HBW"
+                            Grid.Row="0" Grid.Column="0"/>
+                        <Frame  OutlineColor="Black"
+                                Grid.Row="0" Grid.Column="1"
+                                Padding="0">
+                            <Label
+                                    x:Name="HardC"
+                                    Text="Sert"
+                                    FontSize="Small"
+                                    IsVisible="True"
+                                    TextColor="Black"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="0" Grid.Column="1"/>
+                        </Frame>
+                    </Grid>
+                </Grid>
+
+                <!--En Alt Butonlar-->
+
+                <!--Mekanik Özellik Göster-->
+                <Button
+                    Text="Mekanik Özellik&#x0a;Göster"
+                    x:Name="MPS"
+                    ClassId="MPS"
+                    Clicked="MPS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Medium"
+                    WidthRequest="200"
+                    Grid.Row="1" Grid.Column="0"/>
+                <Picker
+                    x:Name="Row1"
+                    ClassId="Row1cs"
+                    IsVisible="False"/>
+
+                <!--Mekanik Özellik Karşılaştır-->
+                <Button
+                    Text="Mekanik Özellik Karşılaştır"
+                    x:Name="MPC"
+                    ClassId="MPC"
+                    Clicked="MPC_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Medium"
+                    WidthRequest="200"
+                    Grid.Row="1" Grid.Column="1"/>
+
+                <Picker
+                    x:Name="Row2"
+                    ClassId="Row2cs"
+                    IsVisible="False"/>
+                
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

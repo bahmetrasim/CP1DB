@@ -63,6 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="NETStandard.Library">
+      <Version>2.0.3</Version>
+    </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.6.258-beta</Version>
     </PackageReference>
@@ -129,6 +132,11 @@
   <ItemGroup>
     <PRIResource Include="Resources\Resource.tr.resx" />
   </ItemGroup>
-  <Import Project="..\CP1\CP1.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\CP1Change\CP1.csproj">
+      <Project>{89ac0fdc-7915-4a81-b280-d988f065be27}</Project>
+      <Name>CP1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

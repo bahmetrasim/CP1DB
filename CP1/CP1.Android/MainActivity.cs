@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using SQLite;
 using Android.Gms.Ads;
+using Xamarin.Forms;
 
 
 namespace CP1.Droid

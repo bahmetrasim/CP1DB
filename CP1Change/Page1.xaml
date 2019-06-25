@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local2="clr-namespace:CP1.Controls"
+             x:Class="CP1.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="controlGrid" Padding="5,10,10,10"
+                  RowSpacing="1" ColumnSpacing="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!--METRAJ HESABI -1-->
+                <Label Text="Metraj Hesabı-1" 
+                Grid.Row="0" Grid.Column="0" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+
+                <Button Text="-İç Çap&#x0a;-Dış Çap&#x0a;-Kalınlık"
+                        ClassId="ME1"
+                        x:Name="ME1"
+                        Margin="0,20,20,0"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        FontSize="10"
+                        HeightRequest="100"
+                        WidthRequest="80"
+                         Clicked="CMS_Clicked"
+                        Grid.Row="0" Grid.Column="0"/>
+                <!--METRAJ HESABI -2-->
+                <Label Text="Metraj Hesabı-2" 
+                Grid.Row="0" Grid.Column="1" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                <Button Text="-Miktar&#x0a;-En&#x0a;-Kalınlık"
+                        x:Name="ME2"
+                        ClassId="ME2"
+                        Margin="0,20,20,0"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        FontSize="10"
+                         HeightRequest="100"
+                        WidthRequest="80"
+                        Clicked="CMS_Clicked"
+                        Grid.Row="0" Grid.Column="1"/>
+                <!--KALINLIK HESABI -1-->
+                <Label Text="Kalınlık Hesabı-1" 
+                Grid.Row="0" Grid.Column="2" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                <Button Text="-Miktar&#x0a;-Metraj&#x0a;-En"
+                        x:Name="KA1"
+                        ClassId="KA1"
+                        Margin="0,20,20,0"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        FontSize="10"
+                         HeightRequest="100"
+                        WidthRequest="80"
+                        Clicked="CMS_Clicked"
+                        Grid.Row="0" Grid.Column="2"/>
+                <!--KALINLIK HESABI -2-->
+                <Label Text="Kalınlık Hesabı-2" 
+                Grid.Row="0" Grid.Column="3" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                <Button Text="-İç Çap&#x0a;-Dış Çap&#x0a;-Metraj"
+                        x:Name="KA2"
+                        ClassId="KA2"
+                        Margin="0,20,20,0"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        FontSize="10"
+                        HeightRequest="100"
+                        WidthRequest="80"
+                        Clicked="CMS_Clicked"
+                        Grid.Row="0" Grid.Column="3"/>
+                <!--DIŞ ÇAP HESABI -1-->
+                <Label Text="Dış Çap Hesabı-1" 
+                Grid.Row="1" Grid.Column="0" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button Text="-İç Çap&#x0a;-En&#x0a;-Miktar"
+                        x:Name="DI1"
+                        ClassId="DI1"
+                        Clicked="CMS_Clicked"
+                        Margin="0,20,20,0"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        HeightRequest="100"
+                        WidthRequest="80"
+                        FontSize="10"
+                        Grid.Row="1" Grid.Column="0"/>
+
+                <!--DIŞ ÇAP HESABI -2-->
+                <Label Text="Dış Çap Hesabı-2" 
+                Grid.Row="1" Grid.Column="1" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button Text="-İç Çap&#x0a;-Metraj&#x0a;-Kalınlık"
+                        x:Name="DI2"
+                        ClassId="DI2"
+                        Clicked="CMS_Clicked"
+                        Margin="0,20,20,0"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        HeightRequest="100"
+                        WidthRequest="80"
+                        FontSize="10"
+                        Grid.Row="1" Grid.Column="1"/>
+                <!--MİKTAR HESABI -1-->
+                <Label Text="Miktar Hesabı-1" 
+                Grid.Row="1" Grid.Column="2" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button
+                    Text="-Metraj&#x0a;-En&#x0a;-Kalınlık"
+                    x:Name="MI1"
+                    ClassId="MI1"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    FontSize="10"
+                    Grid.Row="1" Grid.Column="2"/>
+                <!--MİKTAR HESABI -2-->
+                <Label Text="Miktar Hesabı-2" 
+                Grid.Row="1" Grid.Column="3" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button
+                    Text="-İç Çap&#x0a;-Dış Çap&#x0a;-En"
+                    x:Name="MI2"
+                    ClassId="MI2"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    FontSize="10"
+                    Grid.Row="1" Grid.Column="3"/>
+                <!--İÇ ÇAP HESABI -1-->
+                <Label Text="İç Çap Hesabı-1" 
+                Grid.Row="2" Grid.Column="0" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button
+                    Text="-Miktar&#x0a;-Dış Çap&#x0a;-En"
+                    x:Name="IC1"
+                    ClassId="IC1"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    FontSize="10"
+                    Grid.Row="2" Grid.Column="0"/>
+                <!--İÇ ÇAP HESABI -2-->
+                <Label Text="İç Çap Hesabı-2" 
+                Grid.Row="2" Grid.Column="1" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button
+                    Text="-Metraj&#x0a;-Dış Çap&#x0a;-Kalınlık"
+                    x:Name="IC2"
+                    ClassId="IC2"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    FontSize="10"
+                    Grid.Row="2" Grid.Column="1"/>
+                <!--BOYA HESABI -1-->
+                <Label Text="Boya  Hesabı-1" 
+                Grid.Row="2" Grid.Column="2" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button
+                    Text="-Miktar&#x0a;-Kalınlık&#x0a;-Boya Kal&#x0a;-Kaplama"
+                    x:Name="BO1"
+                    ClassId="BO1"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    FontSize="10"
+                    Grid.Row="2" Grid.Column="2"/>
+
+                <!--BOYA HESABI -2-->
+                <Label Text="Boya  Hesabı-2" 
+                Grid.Row="2" Grid.Column="3" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button
+                    Text="-Miktar&#x0a;-Boya Cins&#x0a;-Kalınlık&#x0a;-Boya Kal"
+                    x:Name="BO2"
+                    ClassId="BO2"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    FontSize="10"
+                    Grid.Row="2" Grid.Column="3"/>
+                <!--Film Ağırlık Hesabı -1-->
+                <Label Text="Film Ağırlığı-1" 
+                Grid.Row="3" Grid.Column="0" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                <Button
+                    Text="-F.İç Çap&#x0a;-F.Dış Çap&#x0a;-F.Kalınlık"
+                    x:Name="FA1"
+                    ClassId="FA1"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    FontSize="10"
+                    Grid.Row="3" Grid.Column="0"/>
+                
+                <!--Film Ağırlık Hesabı -2-->
+                <Label Text="Film Ağırlığı-2" 
+                Grid.Row="3" Grid.Column="1" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                <Button
+                    Text="-F.Metraj&#x0a;-F.Kalınlık&#x0a;-F.En"
+                    x:Name="FA2"
+                    ClassId="FA2"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    FontSize="10"
+                    Grid.Row="3" Grid.Column="1"/>
+
+                <!--Film Metraj Hesabı -1-->
+                <Label Text="Film Metrajı-1" 
+                Grid.Row="3" Grid.Column="2" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                <Button
+                    Text="-F.İç Çap&#x0a;-F.Dış Çap&#x0a;-F.Kalınlık"
+                    x:Name="FM1"
+                    ClassId="FM1"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    FontSize="10"
+                    Grid.Row="3" Grid.Column="2"/>
+
+                <!--Film Metraj Hesabı -2-->
+                <Label Text="Film Metrajı-2" 
+                Grid.Row="3" Grid.Column="3" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                <Button
+                    Text="-F.Miktar&#x0a;-F.Kalınlık&#x0a;-F.En"
+                    x:Name="FM2"
+                    ClassId="FM2"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="80"
+                    FontSize="10"
+                    Grid.Row="3" Grid.Column="3"/>
+                
+                <!--I Unit Hesabı-->
+                <Label Text="I-Unit Hesabı" 
+                Grid.Row="4" Grid.Column="0" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                <Button 
+                    Text="-Dalga Boyu&#x0a;-Dalga Yüksek"
+                    x:Name="IU"
+                    ClassId="IU"
+                    Clicked="CMS_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    FontSize="9"
+                    Grid.Row="4" Grid.Column="0"/>
+
+                <!--Mechanical Properties-->
+                <Label Text="Mekanik Özellikler" 
+                Grid.Row="4" Grid.Column="1" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                <Button 
+                    Text="-Alaşım&#x0a;-Kondüsyon&#x0a;-Kalınlık"
+                    x:Name="MP"
+                    ClassId="MP"
+                    Clicked="MP_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    FontSize="9"
+                    Grid.Row="4" Grid.Column="1"/>
+
+                <!--Tolerans Properties-->
+                <Label Text="Boyutsal Tolerans" 
+                Grid.Row="4" Grid.Column="2" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                <Button 
+                    Text="-Kalınlık&#x0a;-En"
+                    x:Name="DT"
+                    ClassId="DT"
+                    Clicked="DT_Clicked"
+                    Margin="0,20,20,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    FontSize="9"
+                    Grid.Row="4" Grid.Column="2"/>
+
+            </Grid>
+            <local2:AdMobControl AdUnitId="ca-app-pub-3815590831760195/4642118361"
+                                VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
